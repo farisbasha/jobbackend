@@ -11,15 +11,16 @@ Route::middleware(['auth:sanctum'])->get('/user', [AuthController::class, 'user'
 
 
 Route::middleware('auth:sanctum')->group(function () {
-    // Company Routes
-    Route::apiResource('companies', CompanyController::class);
 
-    // PortalJob Routes
-    Route::apiResource('portal-jobs', PortalJobController::class);
 
     // Application Routes
     Route::apiResource('applications', ApplicationController::class);
 });
+// Company Routes
+Route::apiResource('companies', CompanyController::class);
+
+// PortalJob Routes
+Route::apiResource('portal-jobs', PortalJobController::class);
 
 
 
